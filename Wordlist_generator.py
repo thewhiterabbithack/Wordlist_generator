@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 import argparse
 import sys
-import termcolor
+from termcolor import colored
+import pyfiglet
 
+banner = pyfiglet.figlet_format("THE WHITERABBIT")
+print(banner)
 
 # Introducimos la palabra y el número a combinar
 
@@ -20,9 +23,9 @@ try:
             combinacion = args.palabra + str(i)
             f.write(combinacion + '\n')
 
-    print (f'El wordlist se ha creado en: {archivo_salida}')
+    print (colored(f'El wordlist se ha creado en: {archivo_salida}', 'red'))
 except:
-   print ('No se ha podido generar el archivo')
+   print (colored('No se ha podido generar el archivo, faltan argumentos.', 'green'))
 
 
    
