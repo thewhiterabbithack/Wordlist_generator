@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import argparse
 import sys
+import termcolor
+
 
 # Introducimos la palabra y el número a combinar
 
